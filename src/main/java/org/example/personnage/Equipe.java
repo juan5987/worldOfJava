@@ -1,5 +1,9 @@
 package org.example.personnage;
 import org.example.factory.ArmeFactory;
+import org.example.factory.BouclierFactory;
+import org.example.objets.Arme;
+import org.example.objets.Bouclier;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -18,8 +22,22 @@ public class Equipe implements Iterable<IPersonnage> {
 
     // Permet d’ajouter une arme à un combattant en parcourant l’équipe
     public void addArmes(){
-        for (IPersonnage e: tab) {
-            e.setArmes(ArmeFactory.build());
+        for (IPersonnage personnage: tab) {
+            int rand = new Random().nextInt(1, 4);
+            for(int i = 0; i < rand; i++){
+                Arme nouvelleArme = ArmeFactory.build();
+                personnage.ajouterArme(nouvelleArme);
+            }
+        }
+    }
+
+    public void addBoucliers(){
+        for (IPersonnage personnage: tab) {
+            int rand = new Random().nextInt(0, 4);
+            for(int i = 0; i < rand; i++){
+                Bouclier nouveauBouclier = BouclierFactory.build();
+                personnage.ajouterBouclier(nouveauBouclier);
+            }
         }
     }
 

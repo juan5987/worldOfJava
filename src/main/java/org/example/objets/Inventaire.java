@@ -2,9 +2,9 @@ package org.example.objets;
 import java.util.List;
 import java.util.ArrayList;
 public class Inventaire {
-    private List<Arme> armes;
-    private List<Bouclier> boucliers;
-    private List<Nourriture> nourriture;
+    protected List<Arme> armes;
+    protected List<Bouclier> boucliers;
+    protected List<Nourriture> nourriture;
 
     public Inventaire() {
         this.armes = new ArrayList<>();

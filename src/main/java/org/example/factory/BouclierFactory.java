@@ -7,14 +7,15 @@ public class BouclierFactory {
         Bouclier bouclier;
 
         if (rand == 0){
-            bouclier = new Bouclier("Bouclier de diamant", 20, 600);
+            bouclier = new Bouclier("Bouclier de diamant", 12, 600);
         }
         else if (rand > 0 && rand < 5){
-            bouclier = new Bouclier("Bouclier de fer", 15, 800);
+            bouclier = new Bouclier("Bouclier de fer", 8, 800);
         }
         else {
-            bouclier = new Bouclier("Bouclier de bois", 10, 400);
+            bouclier = new Bouclier("Bouclier de bois", 5, 400);
         }
+        System.out.println(bouclier.getNom() + " (" + bouclier.getPointsEncaissement() + " points d'encaissement, " + bouclier.getPoids() + " gr)" );
         return bouclier;
     }
 }
