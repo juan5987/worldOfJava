@@ -110,7 +110,7 @@ public class Game {
         }
         for (IPersonnage monstre: monstres) {
             if(monstre.getInventaire().getBoucliers().size() > 0){
-                int random = new Random().nextInt(monstre.getInventaire().getArmes().size());
+                int random = new Random().nextInt(monstre.getInventaire().getBoucliers().size());
                 Bouclier bouclierEquipe = monstre.getInventaire().getBoucliers().get(random);
                 monstre.setBouclier(bouclierEquipe);
                 System.out.println(monstre.getNom() + " s'équipe du bouclier : " + bouclierEquipe.getNom());
